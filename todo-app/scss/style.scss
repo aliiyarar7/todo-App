@@ -131,4 +131,9 @@ body {
       color: yellow;
     }
   }
+  @media screen and (max-width: 768px) {
+    .button-container {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+  }
 }
