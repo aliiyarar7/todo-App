@@ -1,0 +1,134 @@
+$button-color: rgba(131, 56, 236, 0.7);
+$button-color-hover: rgb(131, 56, 236);
+$font-color: #fff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3rem 2rem;
+    min-width: 310px;
+    width: 50%;
+    height: 500px;
+    border-radius: 15px;
+
+    .todo-input-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      input {
+        width: 80%;
+        padding: 0.5rem 1rem;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px solid #d381fc;
+        border-radius: 999px;
+        color: #fff;
+
+        &::placeholder {
+          text-align: center;
+          color: #fff;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .add-todo-container {
+        width: 80%;
+
+        button {
+          background-color: #0b74b5;
+          border: none;
+          color: white;
+          padding: 10px 32px;
+          margin-bottom: 20px;
+          align-self: flex-start;
+          cursor: pointer;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .button-container {
+      margin: 1rem 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+
+      & > button {
+        background-color: $button-color;
+        color: $font-color;
+        outline: none;
+        border: none;
+        padding: 10px 32px;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $button-color-hover;
+        }
+      }
+    }
+
+    .todo {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      gap: 10px;
+
+      input {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 0;
+        border: 2px solid #d381fc;
+        border-radius: 999px;
+        color: #fff;
+        padding: 5px;
+        &:focus {
+          outline: none;
+        }
+      }
+      i {
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .pen {
+        color: yellow;
+      }
+      .trash {
+        color: red;
+      }
+      .check {
+        color: green;
+      }
+    }
+    .completed {
+      text-decoration-line: line-through;
+      color: yellow;
+    }
+  }
+}
